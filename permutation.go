@@ -30,22 +30,5 @@ func permutation(a []string) [][]string {
 func main() {
 	var input = []string{"a", "b", "c"}
 	fmt.Println(permutation(input))
-	
-// 	str := "ada"
-// 	strSample := []rune(str)
-// 	generatePermutation(strSample, 0, len(strSample)-1)
 
-}
-
-
-func generatePermutation(sampleRune []rune, left, right int) {
-	if left == right {
-		fmt.Println(string(sampleRune))
-	} else {
-		for i := left; i <= right; i++ {
-			sampleRune[left], sampleRune[i] = sampleRune[i], sampleRune[left]
-			generatePermutation(sampleRune, left+1, right)
-			sampleRune[left], sampleRune[i] = sampleRune[i], sampleRune[left]
-		}
-	}
 }
