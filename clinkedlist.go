@@ -66,22 +66,7 @@ func (ll *linkedl) insertatEnd(data int) {
 	current.link = &Node{data: data, link: ll.head}
 }
 
-func (ll *linkedl) reverse() {
-	if ll.head == nil {
-		return
-	}
-	var current = ll.head
-	//var head = ll.head
-	var prev *Node
-	var node *Node
-	for current != nil {
-		node = current.link
-		current.link = prev
-		prev = current
-		current = node
-	}
-	ll.head = prev
-}
+
 
 func main() {
 	var ll = linkedl{}
